@@ -471,7 +471,7 @@
     <div class="post-body" itemprop="articleBody">
           <p>考虑 DP。</p>
 <p>显然 DP 需要一定的顺序。</p>
-<p>因为给出的矩形没有包含的关系，所以我们按照每个矩形右上角点的横坐标 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span> 递增排序，那么纵坐标 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathsize="1.2em"><mi>y</mi></mstyle></mrow><annotation encoding="application/x-tex">\large y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.75em;vertical-align:-0.23332799999999998em;"></span><span class="mord mathdefault sizing reset-size6 size7" style="margin-right:0.03588em;">y</span></span></span></span> 一定是递减排序的，反之亦然。</p>
+<p>因为给出的矩形没有包含的关系，所以我们按照每个矩形右上角点的横坐标 $x$ 递增排序，那么纵坐标 $\large y$ 一定是递减排序的，反之亦然。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021-09/cf1083e-solution/#more" rel="contents">
@@ -567,8 +567,8 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>首先考虑 DAG 的情况。</p>
-<p>拓扑序实际上也是「无后效性」的体现，即若存在 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathsize="1.2em"><mo stretchy="false">(</mo><mi>x</mi><mo>→</mo><mi>y</mi><mo stretchy="false">)</mo></mstyle></mrow><annotation encoding="application/x-tex">\large (x \rightarrow y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2em;vertical-align:-0.3em;"></span><span class="mopen sizing reset-size6 size7">(</span><span class="mord mathdefault sizing reset-size6 size7">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel sizing reset-size6 size7">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.2em;vertical-align:-0.3em;"></span><span class="mord mathdefault sizing reset-size6 size7" style="margin-right:0.03588em;">y</span><span class="mclose sizing reset-size6 size7">)</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span> 无论怎样处理都不会影响到 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathsize="1.2em"><mi>y</mi></mstyle></mrow><annotation encoding="application/x-tex">\large y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.75em;vertical-align:-0.23332799999999998em;"></span><span class="mord mathdefault sizing reset-size6 size7" style="margin-right:0.03588em;">y</span></span></span></span>。</p>
-<p>同理，逆拓扑序也可以理解为无论 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathsize="1.2em"><mi>y</mi></mstyle></mrow><annotation encoding="application/x-tex">\large y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.75em;vertical-align:-0.23332799999999998em;"></span><span class="mord mathdefault sizing reset-size6 size7" style="margin-right:0.03588em;">y</span></span></span></span> 怎样处理，都不会影响 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathsize="1.2em"><mi>x</mi></mstyle></mrow><annotation encoding="application/x-tex">\large x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.516672em;vertical-align:0em;"></span><span class="mord mathdefault sizing reset-size6 size7">x</span></span></span></span>。</p>
+<p>拓扑序实际上也是「无后效性」的体现，即若存在 $\large (x \rightarrow y)$，$x$ 无论怎样处理都不会影响到 $\large y$。</p>
+<p>同理，逆拓扑序也可以理解为无论 $\large y$ 怎样处理，都不会影响 $\large x$。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021-09/lg5008-solution/#more" rel="contents">
@@ -760,7 +760,7 @@
     <div class="post-body" itemprop="articleBody">
           <p>不妨假设平民为白点，杀手为黑点，认识的关系为一条有向边。</p>
 <p>求不访问黑点并且知道黑点的最小代价。</p>
-<p>若有 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathsize="1.2em"><mi>n</mi></mstyle></mrow><annotation encoding="application/x-tex">\large n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.516672em;vertical-align:0em;"></span><span class="mord mathdefault sizing reset-size6 size7">n</span></span></span></span> 个点，显然每个点为黑的概率为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathsize="1.2em"><mfrac><mn>1</mn><mi>n</mi></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\large \frac{1}{n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.402352em;vertical-align:-0.414em;"></span><span class="mord sizing reset-size6 size7"><span class="mopen nulldelimiter sizing reset-size7 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8236266666666667em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size7 size4 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size7 size4 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size7 size6"></span></span></span></span></span>。</p>
+<p>若有 $\large n$ 个点，显然每个点为黑的概率为 $\large \frac{1}{n}$。</p>
 <p>而每访问一个白点，都能得知与它出边相连的点的颜色。</p>
 <p>考虑强连通分量。</p>
           <!--noindex-->
@@ -857,7 +857,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><img data-src="https://i.loli.net/2021/08/31/tsg5eRPBGNdiVLu.jpg" alt="92389224_p3.jpg" /></p>
+          <p><img data-src="https://i.loli.net/2021/08/31/tsg5eRPBGNdiVLu.jpg" alt="92389224_p3.jpg"></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021-08/Miku-14th/#more" rel="contents">
@@ -952,7 +952,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><img data-src="https://i.loli.net/2021/08/30/so4jDblh1LSvMi7.jpg" alt="" /></p>
+          <p><img data-src="https://i.loli.net/2021/08/30/so4jDblh1LSvMi7.jpg" alt=""></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021-08/recollect-summer2021/#more" rel="contents">
@@ -1048,8 +1048,8 @@
     
     <div class="post-body" itemprop="articleBody">
           <p><a target="_blank" rel="noopener" href="https://darkbzoj.tk/problem/2863">link</a></p>
-<p>看到题目，就想起各种空耳了，<s>我到河北省来</s>（</p>
-<p>大概意思是计算节点数为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span> 的 DAG 数量。</p>
+<p>看到题目，就想起各种空耳了，<del>我到河北省来</del>（</p>
+<p>大概意思是计算节点数为 $n$ 的 DAG 数量。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021-08/bzoj2863-solution/#more" rel="contents">
@@ -1145,8 +1145,8 @@
     
     <div class="post-body" itemprop="articleBody">
           <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4644">link</a></p>
-<p>显然的，「时间段」应作为 DP 的阶段。</p>
-<p>设 $\large f(x) $ 为打扫 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathsize="1.2em"><mo stretchy="false">[</mo><mi>M</mi><mo separator="true">,</mo><mi>x</mi><mo stretchy="false">]</mo></mstyle></mrow><annotation encoding="application/x-tex">\large [M,x]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2em;vertical-align:-0.3em;"></span><span class="mopen sizing reset-size6 size7">[</span><span class="mord mathdefault sizing reset-size6 size7" style="margin-right:0.10903em;">M</span><span class="mpunct sizing reset-size6 size7">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault sizing reset-size6 size7">x</span><span class="mclose sizing reset-size6 size7">]</span></span></span></span> 的最小花费。</p>
+<p> 显然的，「时间段」应作为 DP 的阶段。</p>
+<p>设 $\large f(x) $ 为打扫 $\large [M,x]$ 的最小花费。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021-08/lg4644-solution/#more" rel="contents">
