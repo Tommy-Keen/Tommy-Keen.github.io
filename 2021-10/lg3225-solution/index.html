@@ -50,7 +50,9 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
-</head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
@@ -285,13 +287,14 @@
         <p>本题思路还是比较清晰的。</p>
 <p>显然的，求出 v-DCC 并缩点，然后判断方案数。</p>
 <span id="more"></span>
+
 <p>在本题中，可以只用 Tarjan 算法求出割点。标记割点，从其他的点依次 DFS，统计每颗搜索树上割点的数量（不重复统计）。</p>
-<p>若图中没有割点，那么图中任选两个节点都能满足条件，答案 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathsize="1.2em"><mo>(</mo><mn>2</mn><mo separator="true">,</mo><msubsup><mi>C</mi><mi>n</mi><mn>2</mn></msubsup><mo>)</mo></mstyle></mrow><annotation encoding="application/x-tex">\large (2,C_n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9769295999999998em;"></span><span class="strut bottom" style="height:1.2769295999999999em;vertical-align:-0.3em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="sizing reset-size5 size6 textstyle uncramped"><span class="mopen">(</span><span class="mord mathrm">2</span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="vlist"><span style="top:0.247em;margin-left:-0.07153em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size6 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">n</span></span></span><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size6 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size6 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose">)</span></span></span></span></span></span></p>
+<p>若图中没有割点，那么图中任选两个节点都能满足条件，答案 $\large (2,C_n^2)$</p>
 <p>若搜索树上割点为 1，则由于树上两点之间有且仅有一条简单路径，所以这颗搜索树中一定至少选一个点，累加答案，累乘方案数。</p>
 <p>若割点多于 1，那么对答案是没有贡献的。</p>
 <p>因为无论哪一个点被破坏，该搜索树都会分裂成为上述两种情况。</p>
 <p>这种做法实现细节较多。</p>
-<p>姑且算是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathsize="1.2em"><mi>O</mi><mo>(</mo><msup><mi>n</mi><mn>2</mn></msup><mo>)</mo></mstyle></mrow><annotation encoding="application/x-tex">\large O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9769295999999998em;"></span><span class="strut bottom" style="height:1.2769295999999999em;vertical-align:-0.3em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="sizing reset-size5 size6 textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">n</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size6 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size6 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose">)</span></span></span></span></span></span>？</p>
+<p>姑且算是 $\large O(n^2)$？</p>
 <pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;cstdio></span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;cstring></span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
