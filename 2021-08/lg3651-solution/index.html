@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.0">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
@@ -19,12 +18,12 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"mikku01ck.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.9.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"mikku01ck.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.9.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 <meta name="description" content="link 首先明确，题目中给出的是一个外向基环树森林。 可以修改每个节点的入边，并求使其强连通的最小代价。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="luogu3651 展翅翱翔之时 题解">
 <meta property="og:url" content="https://mikku01ck.github.io/2021-08/lg3651-solution/index.html">
-<meta property="og:site_name" content="Sz_zUwu&#39;s blog">
+<meta property="og:site_name" content="僕のブログ">
 <meta property="og:description" content="link 首先明确，题目中给出的是一个外向基环树森林。 可以修改每个节点的入边，并求使其强连通的最小代价。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-08-01T09:51:35.000Z">
@@ -41,7 +40,7 @@
 <script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://mikku01ck.github.io/2021-08/lg3651-solution/","path":"2021-08/lg3651-solution/","title":"luogu3651 展翅翱翔之时 题解"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>luogu3651 展翅翱翔之时 题解 | Sz_zUwu's blog</title>
+<title>luogu3651 展翅翱翔之时 题解 | 僕のブログ</title>
   
 
 
@@ -71,7 +70,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <p class="site-title">Sz_zUwu's blog</p>
+      <p class="site-title">僕のブログ</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">φ(゜▽゜*)♪</p>
@@ -93,7 +92,6 @@
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">39</span></a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">6</span></a></li>
         <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">69</span></a></li>
-        <li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -198,9 +196,9 @@
   <div class="sidebar-dimmer"></div>
 
 
-    </header>
+	</header>
 
-    
+		
   <div class="back-to-top" role="button" aria-label="返回顶部">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
@@ -212,7 +210,7 @@
 </noscript>
 
 
-    <div class="main-inner post posts-expand">
+		<div class="main-inner post posts-expand">
 
 
   
@@ -232,7 +230,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sz_zUwu's blog">
+      <meta itemprop="name" content="僕のブログ">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -275,6 +273,7 @@
       <span id="twikoo_visitors"></span>
     </span>
   
+    <span class="post-meta-break"></span>
     <span class="post-meta-item" title="本文字数">
       <span class="post-meta-item-icon">
         <i class="far fa-file-word"></i>
@@ -315,11 +314,11 @@
 <p>根据上面的推断，我们最终得到的是一个环。环是满足强连通的最简单的结构。</p>
 <p>我们设 <span class="math inline">\(f(i)\)</span> 为节点 <span
 class="math inline">\(i\)</span> 初始时的父节点，直接读入即可。</p>
-<pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%lld"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%lld"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span><span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
 	<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%lld%lld"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>f<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token function">add</span><span class="token punctuation">(</span>f<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span>i<span class="token punctuation">,</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></code></pre>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>接着就是找环，我么用 <span class="math inline">\(cy()\)</span>
 保存环上的点，用 <span class="math inline">\(v()\)</span> 标记节点。</p>
 <p><span class="math inline">\(v(i)=0\)</span> 表示节点 <span
@@ -328,17 +327,17 @@ class="math inline">\(v(i)=1\)</span> 表示节点 <span
 class="math inline">\(i\)</span> 被访问过，但不是环上的点，<span
 class="math inline">\(v(i)=2\)</span> 表示节点 <span
 class="math inline">\(i\)</span> 是环上的点。</p>
-<pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">find</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">find</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
 	k<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
 	<span class="token keyword">while</span><span class="token punctuation">(</span><span class="token operator">!</span>v<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">)</span> v<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> x<span class="token operator">=</span>f<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">;</span>
 	<span class="token keyword">while</span><span class="token punctuation">(</span>v<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span> cy<span class="token punctuation">[</span><span class="token operator">++</span>k<span class="token punctuation">]</span><span class="token operator">=</span>x<span class="token punctuation">,</span> v<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span> x<span class="token operator">=</span>f<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></code></pre>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>然后找每棵树的最长链。设 <span class="math inline">\(out(i)\)</span>
 为节点 <span class="math inline">\(i\)</span> 权值最大的子节点编号。</p>
 <p>对环上的每个点进行 dfs，不断更新 <span
 class="math inline">\(out(i)\)</span>，并将非最长链上的边的权值累加
 <span class="math inline">\(ans\)</span>。</p>
-<pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">dfs</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span><span class="token keyword">int</span> fr<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">dfs</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span><span class="token keyword">int</span> fr<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
 	<span class="token keyword">int</span> i<span class="token punctuation">,</span> y<span class="token punctuation">;</span>
 	<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>v<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">)</span> v<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
 	<span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span>h<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">;</span>i<span class="token punctuation">;</span>i<span class="token operator">=</span>nxt<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">if</span><span class="token punctuation">(</span>ver<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">!=</span>fr<span class="token operator">&amp;&amp;</span>v<span class="token punctuation">[</span>ver<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token operator">!=</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
@@ -346,7 +345,7 @@ class="math inline">\(out(i)\)</span>，并将非最长链上的边的权值累�
 		<span class="token function">dfs</span><span class="token punctuation">(</span>y<span class="token punctuation">,</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
 		<span class="token keyword">if</span><span class="token punctuation">(</span>g<span class="token punctuation">[</span>out<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token operator">></span>g<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> ans<span class="token operator">+=</span>g<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">else</span> ans<span class="token operator">+=</span>g<span class="token punctuation">[</span>out<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span> out<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token operator">=</span>i<span class="token punctuation">;</span>
 	<span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code></pre>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>接着就是环上点的处理，我们考虑两种情况。</p>
 <p>对于环上的点 <span
 class="math inline">\(i\)</span>，要将环拆为链。</p>
@@ -367,7 +366,7 @@ class="math inline">\(y\)</span>
 两种状态转移，所以就有了这个奇怪的式子。</p>
 <p>最后对于每颗树，累加 <span class="math inline">\(y\)</span>
 就可以了。</p>
-<pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span><span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>v<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span><span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>v<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
 	<span class="token function">find</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token keyword">if</span><span class="token punctuation">(</span>k<span class="token operator">==</span>n<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"0"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
     <span class="token comment">/* 如果环上的点等于n，那么就已经在同一个环里 */</span>
@@ -378,7 +377,7 @@ class="math inline">\(y\)</span>
 		x<span class="token operator">+=</span>g<span class="token punctuation">[</span>out<span class="token punctuation">[</span>f<span class="token punctuation">[</span>cy<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 	<span class="token punctuation">&#125;</span>
 	ans<span class="token operator">+=</span>y<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></code></pre>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>虽然是蓝题，但是感觉比紫题还烧脑 QwQ。</p>
 
     </div>
@@ -417,7 +416,26 @@ class="math inline">\(y\)</span>
 
     <div class="comments"><div id="twikoo-comments"></div></div>
 </div>
-  </main>
+	</main>
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+	<div>
+		<meting-js
+			server="netease" 
+			type="playlist" 
+			id="6917863608"
+			fixed="true" 
+			autoplay="false"
+			loop="all"
+			order="random"
+			preload="auto"
+			list-folded="ture"
+			list-max-height="500px"
+			lrc-type="1">
+		</meting-js>	
+	</div>
 
   <footer class="footer">
     <div class="footer-inner">
@@ -439,8 +457,9 @@ class="math inline">\(y\)</span>
 
   
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
 
   
 <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
