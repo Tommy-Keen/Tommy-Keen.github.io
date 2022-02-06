@@ -10,6 +10,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/4.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/4.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="baidu-site-verification" content="7kBMv6UJrb5yCmuU">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -20,11 +21,11 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"miku01ck.xyz","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.9.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 <meta property="og:type" content="website">
-<meta property="og:title" content="僕のブログ">
+<meta property="og:title" content="_yozora&#39;s blog">
 <meta property="og:url" content="https://miku01ck.xyz/index.html">
-<meta property="og:site_name" content="僕のブログ">
+<meta property="og:site_name" content="_yozora&#39;s blog">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="Sz_zUwu">
+<meta property="article:author" content="_yozora">
 <meta name="twitter:card" content="summary">
 
 
@@ -35,7 +36,7 @@
 <script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>僕のブログ - φ(゜▽゜*)♪</title>
+<title>_yozora's blog - φ(゜▽゜*)♪</title>
   
 
 
@@ -65,7 +66,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">僕のブログ</h1>
+      <h1 class="site-title">_yozora's blog</h1>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">φ(゜▽゜*)♪</p>
@@ -148,9 +149,9 @@
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Sz_zUwu"
+    <img class="site-author-image" itemprop="image" alt="_yozora"
       src="/images/1.jpg">
-  <p class="site-author-name" itemprop="name">Sz_zUwu</p>
+  <p class="site-author-name" itemprop="name">_yozora</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap site-overview-item animated">
@@ -219,12 +220,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/1.jpg">
-      <meta itemprop="name" content="Sz_zUwu">
+      <meta itemprop="name" content="_yozora">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="僕のブログ">
+      <meta itemprop="name" content="_yozora's blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -238,9 +239,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2022-02-04 15:04:48 / 修改时间：15:05:57" itemprop="dateCreated datePublished" datetime="2022-02-04T15:04:48+08:00">2022-02-04</time>
+      <time title="创建时间：2022-02-04 15:04:48" itemprop="dateCreated datePublished" datetime="2022-02-04T15:04:48+08:00">2022-02-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-02-06 12:58:25" itemprop="dateModified" datetime="2022-02-06T12:58:25+08:00">2022-02-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -286,8 +293,8 @@
     
     <div class="post-body" itemprop="articleBody">
           <h2 id="分析">分析</h2>
-<p>满足 $1 n $ 和 <span class="math inline">\(1 \le a_i &lt; b_i \le
-10000\)</span>，这都不离散化，那还是人么（）。</p>
+<p>满足 $n $ 和 <span class="math inline">\(a_i,b_i \in
+[1,10000]\)</span>，这都不离散化，那还是人么（）。</p>
 <p>没有明显的线性更新顺序，「时间」则是一个天然的序，且区间信息可以合并，所以设
 <span class="math inline">\(f(l,r)\)</span> 为在时间 <span
 class="math inline">\([l,r]\)</span> 内，消灭所有
@@ -329,12 +336,12 @@ aliens，所需要的最小代价。</p>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/1.jpg">
-      <meta itemprop="name" content="Sz_zUwu">
+      <meta itemprop="name" content="_yozora">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="僕のブログ">
+      <meta itemprop="name" content="_yozora's blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -442,12 +449,12 @@ d\)</span>，那么肯定是无解。反过来想，如果不大于，那么一�
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/1.jpg">
-      <meta itemprop="name" content="Sz_zUwu">
+      <meta itemprop="name" content="_yozora">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="僕のブログ">
+      <meta itemprop="name" content="_yozora's blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -461,9 +468,15 @@ d\)</span>，那么肯定是无解。反过来想，如果不大于，那么一�
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2022-02-04 11:06:28 / 修改时间：15:06:15" itemprop="dateCreated datePublished" datetime="2022-02-04T11:06:28+08:00">2022-02-04</time>
+      <time title="创建时间：2022-02-04 11:06:28" itemprop="dateCreated datePublished" datetime="2022-02-04T11:06:28+08:00">2022-02-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-02-06 12:54:18" itemprop="dateModified" datetime="2022-02-06T12:54:18+08:00">2022-02-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -509,8 +522,6 @@ d\)</span>，那么肯定是无解。反过来想，如果不大于，那么一�
     
     <div class="post-body" itemprop="articleBody">
           <p>水一篇题解</p>
-<h2 id="分析">分析</h2>
-<p>将多游修理点按照位置递增排序。由于经过一个点便会立即修复它，所以每次被修复的点一定是一个连续的区间。由于修完一个区间后处于左右端点有后效性，要加进状态里。这样状态就出来了。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022-02/uva1336-solution/#more" rel="contents">
@@ -548,12 +559,12 @@ d\)</span>，那么肯定是无解。反过来想，如果不大于，那么一�
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/1.jpg">
-      <meta itemprop="name" content="Sz_zUwu">
+      <meta itemprop="name" content="_yozora">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="僕のブログ">
+      <meta itemprop="name" content="_yozora's blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -665,12 +676,12 @@ class="math inline">\(x^2\)</span>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/1.jpg">
-      <meta itemprop="name" content="Sz_zUwu">
+      <meta itemprop="name" content="_yozora">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="僕のブログ">
+      <meta itemprop="name" content="_yozora's blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -777,12 +788,12 @@ class="math inline">\(n\)</span> 大于最大值，小于最小值时，无解�
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/1.jpg">
-      <meta itemprop="name" content="Sz_zUwu">
+      <meta itemprop="name" content="_yozora">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="僕のブログ">
+      <meta itemprop="name" content="_yozora's blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -883,12 +894,12 @@ class="math inline">\(n\)</span> 大于最大值，小于最小值时，无解�
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/1.jpg">
-      <meta itemprop="name" content="Sz_zUwu">
+      <meta itemprop="name" content="_yozora">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="僕のブログ">
+      <meta itemprop="name" content="_yozora's blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -993,12 +1004,12 @@ S\)</span>，显然能够转移，但方程并不是一个简单的多项式。<
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/1.jpg">
-      <meta itemprop="name" content="Sz_zUwu">
+      <meta itemprop="name" content="_yozora">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="僕のブログ">
+      <meta itemprop="name" content="_yozora's blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -1120,12 +1131,12 @@ class="math inline">\(S\)</span> 时，能否成功分割。</p>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/1.jpg">
-      <meta itemprop="name" content="Sz_zUwu">
+      <meta itemprop="name" content="_yozora">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="僕のブログ">
+      <meta itemprop="name" content="_yozora's blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -1226,12 +1237,12 @@ class="math inline">\(\large j\)</span> 个原料时的耐久度之和。</p>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/1.jpg">
-      <meta itemprop="name" content="Sz_zUwu">
+      <meta itemprop="name" content="_yozora">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="僕のブログ">
+      <meta itemprop="name" content="_yozora's blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -1362,7 +1373,7 @@ class="math inline">\(\large j\)</span> 个原料时的耐久度之和。</p>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Sz_zUwu</span>
+  <span class="author" itemprop="copyrightHolder">_yozora</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
   </div>
