@@ -2,6 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://miku01ck.xyz/tags/index.html</loc>
+    
+    <lastmod>2022-02-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://miku01ck.xyz/categories/index.html</loc>
+    
+    <lastmod>2022-02-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://miku01ck.xyz/about/index.html</loc>
+    
+    <lastmod>2022-02-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://miku01ck.xyz/links/index.html</loc>
+    
+    <lastmod>2022-02-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://miku01ck.xyz/2022-02/lg4766-solution/</loc>
     
     <lastmod>2022-02-06</lastmod>
@@ -39,15 +75,6 @@
   
   <url>
     <loc>https://miku01ck.xyz/schedule/index.html</loc>
-    
-    <lastmod>2022-01-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://miku01ck.xyz/links/index.html</loc>
     
     <lastmod>2022-01-29</lastmod>
     
@@ -95,15 +122,6 @@
     <loc>https://miku01ck.xyz/2022-01/lg5858-solution/</loc>
     
     <lastmod>2022-01-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://miku01ck.xyz/about/index.html</loc>
-    
-    <lastmod>2022-01-09</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -677,24 +695,6 @@
   </url>
   
   <url>
-    <loc>https://miku01ck.xyz/tags/index.html</loc>
-    
-    <lastmod>2021-10-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://miku01ck.xyz/categories/index.html</loc>
-    
-    <lastmod>2021-10-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://miku01ck.xyz/2021-08/yume-yo-mirai-e/</loc>
     
     <lastmod>2021-10-01</lastmod>
@@ -725,15 +725,6 @@
     <loc>https://miku01ck.xyz/2021-08/yozora-round-1/</loc>
     
     <lastmod>2021-10-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://miku01ck.xyz/about/site.html</loc>
-    
-    <lastmod>2021-08-08</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
