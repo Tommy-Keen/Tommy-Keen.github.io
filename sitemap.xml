@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://miku01ck.xyz/2022-02/notes-graph-1/</loc>
+    
+    <lastmod>2022-02-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://miku01ck.xyz/2022-02/notes-probblty-1/</loc>
+    
+    <lastmod>2022-02-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://miku01ck.xyz/2022-02/notes-graph-2-1/</loc>
     
     <lastmod>2022-02-13</lastmod>
@@ -14,15 +32,6 @@
     <loc>https://miku01ck.xyz/links/index.html</loc>
     
     <lastmod>2022-02-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://miku01ck.xyz/2022-02/notes-graph-1/</loc>
-    
-    <lastmod>2022-02-11</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1083,6 +1092,13 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://miku01ck.xyz/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/</loc>
+    <lastmod>2022-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -1150,6 +1166,20 @@
   
   <url>
     <loc>https://miku01ck.xyz/categories/%E5%9B%BE%E8%AE%BA/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2022-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://miku01ck.xyz/categories/%E6%95%B0%E5%AD%A6/</loc>
+    <lastmod>2022-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://miku01ck.xyz/categories/%E6%95%B0%E5%AD%A6/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
