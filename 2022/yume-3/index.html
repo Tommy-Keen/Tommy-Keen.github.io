@@ -23,28 +23,28 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"miku01ck.xyz","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.9.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="link 显然的，在 \(\large N \times M\) 的网格中任选三点的方案数为 \[ \large C^3_{n+m} &#x3D; \frac{(n+m)!}{3! \cdot (n+m-3)!} &#x3D; \frac{(n+m) \cdot (n+m-1) \cdot (n+m-2)}{6} \] 还要减去三点共线的情况。">
+<meta name="description" content="一些事 这一周真就离谱。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="luogu3166 数三角形 题解">
-<meta property="og:url" content="https://miku01ck.xyz/2021/lg3166-solution/index.html">
+<meta property="og:title" content="「琐记」＃3">
+<meta property="og:url" content="https://miku01ck.xyz/2022/yume-3/index.html">
 <meta property="og:site_name" content="Sz_zUwu&#39;s blog">
-<meta property="og:description" content="link 显然的，在 \(\large N \times M\) 的网格中任选三点的方案数为 \[ \large C^3_{n+m} &#x3D; \frac{(n+m)!}{3! \cdot (n+m-3)!} &#x3D; \frac{(n+m) \cdot (n+m-1) \cdot (n+m-2)}{6} \] 还要减去三点共线的情况。">
+<meta property="og:description" content="一些事 这一周真就离谱。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-08-28T13:34:35.000Z">
-<meta property="article:modified_time" content="2021-12-19T09:36:24.843Z">
+<meta property="article:published_time" content="2022-03-12T09:33:41.000Z">
+<meta property="article:modified_time" content="2022-03-12T09:40:51.183Z">
 <meta property="article:author" content="Sz_zUwu">
-<meta property="article:tag" content="组合数学">
+<meta property="article:tag" content="琐记">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://miku01ck.xyz/2021/lg3166-solution/">
+<link rel="canonical" href="https://miku01ck.xyz/2022/yume-3/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://miku01ck.xyz/2021/lg3166-solution/","path":"2021/lg3166-solution/","title":"luogu3166 数三角形 题解"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://miku01ck.xyz/2022/yume-3/","path":"2022/yume-3/","title":"「琐记」＃3"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>luogu3166 数三角形 题解 | Sz_zUwu's blog</title>
+<title>「琐记」＃3 | Sz_zUwu's blog</title>
   
 
 
@@ -140,7 +140,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -153,6 +153,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E4%BA%8B"><span class="nav-number">1.</span> <span class="nav-text">一些事</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%A4%E8%B7%AF%E4%BA%BA"><span class="nav-number">2.</span> <span class="nav-text">两路人</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%AD%82%E7%89%B5%E6%A2%A6%E8%90%A6"><span class="nav-number">3.</span> <span class="nav-text">魂牵梦萦</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -244,7 +245,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://miku01ck.xyz/2021/lg3166-solution/">
+    <link itemprop="mainEntityOfPage" href="https://miku01ck.xyz/2022/yume-3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/1.jpg">
@@ -257,7 +258,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          luogu3166 数三角形 题解
+          「琐记」＃3
         </h1>
 
         <div class="post-meta-container">
@@ -267,15 +268,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-08-28 21:34:35" itemprop="dateCreated datePublished" datetime="2021-08-28T21:34:35+08:00">2021-08-28</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-12-19 17:36:24" itemprop="dateModified" datetime="2021-12-19T17:36:24+08:00">2021-12-19</time>
+      <time title="创建时间：2022-03-12 17:33:41 / 修改时间：17:40:51" itemprop="dateCreated datePublished" datetime="2022-03-12T17:33:41+08:00">2022-03-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -283,7 +278,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E9%A2%98%E8%A7%A3/" itemprop="url" rel="index"><span itemprop="name">题解</span></a>
+          <a href="/categories/%E7%AE%80%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">简记</span></a>
         </span>
     </span>
  
@@ -302,14 +297,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>879</span>
+      <span>1.8k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>4 分钟</span>
     </span>
 </div>
 
@@ -320,47 +315,63 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3166">link</a></p>
-<p>显然的，在 <span class="math inline">\(\large N \times M\)</span>
-的网格中任选三点的方案数为 <span class="math display">\[
-\large C^3_{n+m} = \frac{(n+m)!}{3! \cdot (n+m-3)!} = \frac{(n+m) \cdot
-(n+m-1) \cdot (n+m-2)}{6}
-\]</span> 还要减去三点共线的情况。</p>
+        <h2 id="一些事">一些事</h2>
+<p>这一周真就离谱。</p>
 <span id="more"></span>
-<p>三点共线且沿矩形边的方案数 <span class="math display">\[
-\large C_n^3 = \frac{n!}{3! \cdot (n-3)!} = \frac{n \cdot (n-1) \cdot
-(n-2)}{6}
-\\
-\large C^3_m= \frac{m!}{3! \cdot (m-3)!} = \frac{m \cdot (m-1) \cdot
-(m-2)}{6}
-\]</span></p>
-<p>三点共线且不沿矩形边的方案数</p>
-<p>设斜线 <span class="math inline">\(\large (0,0) \rightarrow
-(x,y)\)</span>，则其经过点数为 <span class="math inline">\(\large
-\gcd(x,y)+1\)</span>。</p>
-<p>又因为是三点共线，所以有 <span class="math inline">\(\large
-\gcd(x,y)-1\)</span> 种可能。</p>
-<p>该斜线可以左右平移 <span class="math inline">\(\large (n-x)\)</span>
-次，上下平移 <span class="math inline">\(\large (m-y)\)</span>
-次，还有正反两种可能。</p>
-<p>乘法原理。</p>
-<p>实现的时候将 <span class="math inline">\(\large n\)</span> 与 $m $
-都加
-1，因为这是坐标，而组合数计算的是点数，并且计算斜边时也要注意边界的变化。</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;cstdio></span></span>
-<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">ll</span> <span class="token expression"><span class="token keyword">long</span> <span class="token keyword">long</span></span></span>
-ll n<span class="token punctuation">,</span> m<span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> z<span class="token punctuation">;</span>
-ll <span class="token function">gcd</span><span class="token punctuation">(</span>ll x<span class="token punctuation">,</span>ll y<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token keyword">return</span> y<span class="token operator">?</span> <span class="token function">gcd</span><span class="token punctuation">(</span>y<span class="token punctuation">,</span>x<span class="token operator">%</span>y<span class="token punctuation">)</span><span class="token operator">:</span>x<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%lld%lld"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>n<span class="token punctuation">,</span><span class="token operator">&amp;</span>m<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">++</span>n<span class="token punctuation">,</span> <span class="token operator">++</span>m<span class="token punctuation">;</span>
-    z<span class="token operator">=</span>n<span class="token operator">*</span>m<span class="token operator">*</span><span class="token punctuation">(</span>n<span class="token operator">*</span>m<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token punctuation">(</span>n<span class="token operator">*</span>m<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">6</span><span class="token punctuation">;</span>
-    x<span class="token operator">=</span>n<span class="token operator">*</span><span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">6</span><span class="token operator">*</span>m<span class="token punctuation">;</span>
-    y<span class="token operator">=</span>m<span class="token operator">*</span><span class="token punctuation">(</span>m<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token punctuation">(</span>m<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">6</span><span class="token operator">*</span>n<span class="token punctuation">;</span>
-    z<span class="token operator">=</span>z<span class="token operator">-</span>x<span class="token operator">-</span>y<span class="token punctuation">;</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span><span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>j<span class="token operator">&lt;</span>m<span class="token punctuation">;</span><span class="token operator">++</span>j<span class="token punctuation">)</span> z<span class="token operator">-=</span><span class="token punctuation">(</span>n<span class="token operator">-</span>i<span class="token punctuation">)</span><span class="token operator">*</span><span class="token punctuation">(</span>m<span class="token operator">-</span>j<span class="token punctuation">)</span><span class="token operator">*</span><span class="token punctuation">(</span><span class="token function">gcd</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span>j<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token operator">&lt;&lt;</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%lld\n"</span><span class="token punctuation">,</span>z<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>我们宿舍里除了一个疑似水痘，已经停课就医了，宿舍和教室都消了毒。第二天，市区又有一个淄博来的密接在万达被抓到了。一时间人心惶惶，大家都以为要停课了。然而并没有。</p>
+<p>昨天我们上体育课的时候，看到外面有警车路过，而且他去的那个方向浓烟滚滚。回家才知道，某医学院附属医院失火了（我以前还去过那里），火势非常大，我们在大概
+4 公里外面都能看到。</p>
+<p>然后下午放学的时候，班主任说明天（周六）全校做核酸，并且做好上网课的准备。还要我们把重要的书都带回去。</p>
+<p>看来确实要停课了？</p>
+<p>不过肯定不会太久，甚至可能就不会停，因为那些家伙们最不想看到的就是本校中考成绩下降。</p>
+<p> </p>
+<p>去学校做完核酸了。初三最后做，我们班又是最后一个班，最终到了 12:40
+左右才弄完，午饭都没吃。</p>
+<h2 id="两路人">两路人</h2>
+<p>同学们与我之间，隔着不可跨越的鸿沟。</p>
+<p>有些家伙，他们擅长应试并乐此不疲，总喜欢整理那些难度大到不可能在中考出现的文化课题目，总仰慕着那些课本里没有的公式与知识。每当别人不懂时，他们就很激动地炫耀着那些东西。</p>
+<p>有些家伙，他们<strong>在学校里</strong>不怎么认真学习，但是也能取得很好的文化课成绩。他们常常嘲笑别人内卷、努力，但是他们却仅仅局限于文化课，凡是与考试无关的，不接触，也不想接触。</p>
+<p>有些家伙，他们变得那么麻木，为了中考而麻木，做着不必要的麻木。为了一个所谓重点班，拼命学习钻研文化课知识，每天学到晚上
+11 点。</p>
+<p>在这些人之间，我已经撑不下去了，不仅仅是志不同道不合，而且我讨厌某个嘲笑他的同桌写作业的人，讨厌某个被别人捧为“不努力也是学霸”的人，讨厌某个说着摸鱼，实际上无比看重文化课的人。</p>
+<p>尽管同学们是我在学校里唯一的能够交流的人，但在两条路之间不会产生我期望的友谊。做着停留于说说笑笑层面的朋友，留下浅浅的记忆，尽管不错，但我仍觉孤独。</p>
+<p>于是，那天我写完作业之后。我在那一张纸上，不断地写着那些人的名字。那些给我带来过温暖的群友，那些陪伴过我的
+OIer，那些我曾拼命追赶的神犇，那些教导过我的前辈……</p>
+<p>他们，是我生活的动力，是我的那个深爱，却不敢去感受的世界。</p>
+<h2 id="魂牵梦萦">魂牵梦萦</h2>
+<p>我做不到。</p>
+<p>OI。</p>
+<p>我怎么就是离不开你呢？为什么做个梦都梦到你？为什么向别人介绍你的时候总带着一种自豪？为什么讲到那些内容的时候总是热血沸腾？为什么我还会把你看作我与同学们的不同？为什么你时时刻刻存于我心？</p>
+<p>但为什么又是做不到全力以赴呢？</p>
+<p>为什么啊！</p>
+<p> </p>
+<p>某天晚上在别的班的宿舍里，与一个考上“鸿蒙班”的人和两个没有考上的人闲聊。</p>
+<p>我凭借自己不知道从哪里学来的东西，给他们讲全国范围（主要是山东）内的中学，各种强校、逸闻，以及包括公私合营在内的各种恶性发展。</p>
+<p>最后和那个鸿蒙班之人聊到了竞赛，他问我学哪一科好，我回答说：除了
+OI，以你现有的条件，都是可行的。MO
+竞争压力较大，你可以退而求其次。然后他说他觉得每一科都很难。这时另一个人问我：“你知道
+enjoyAI
+吗？我当时去参加市里比赛的时候，泡泡龙（他的领队）说，鸿蒙版所在的 B
+校也有学这个的。但是我想去 B
+校航空班，他们待遇很好，教室里的灯都是护眼灯，还单独吃住。”我脱口而出：“但是
+OI 弱爆了，连个认真学的都没有。”</p>
+<p>正当话题进入僵局时，有个人突然说：”胜利油田某中学怎么样？阿钊不是想去吗？“我只能回答：”在山东，无论是高考还是竞赛都算强校，但是想要去那里的话相当困难，困难到不是你考的多好就能做到的。“</p>
+<p>但是某人又说：“我老家那里学习好的都去那里了。”阿钊也表示他对那个学校以及所在的城市相当熟悉。</p>
+<p>好嘛原来是油田某中学的后备生源基地，但是初二快要考生物地理的时候，我们的数学老师（89
+年的教务处主任）就警告我们说我们这一级不能去别的地方上学了，B
+校之前成绩不好就是因为好学生都走了。所以我们两个重点班的学生，除了阿钊，就没有说自己不想去
+B
+校的。但是阿钊不是一般人，他从来都是我行我素，大胆地在班里目标墙上写了油田某中学。</p>
+<p>嘛，阿钊啊，绝对是我的好榜样，不管现实是怎么样，敢于追求自己需要的、想要的。</p>
+<p> </p>
+<p>不过静下心来，我所害怕的，我所彷徨的，不就仅仅是学校吗？苦于 B
+校的文化课至上，压榨学生，放假少，没有 OI
+的条件。但是当想要另辟蹊径时，却正逢某局与那些学校 PY
+交易的暂时结束。</p>
+<p>本来似乎抓到了一点希望，但时那条永远也传达不到的消息却是冰冷残酷的，不抱希望的苦苦等待揪着我的心，幻想和悲观的本性让我焦虑不堪。</p>
+<p>可是，如果真的有机会的话，如果看起来有机会的话，如果在我心里有机会的话。</p>
+<p>麻烦让我试试。</p>
+<p>好吗？</p>
 
     </div>
 
@@ -370,21 +381,18 @@ ll <span class="token function">gcd</span><span class="token punctuation">(</spa
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/" rel="tag"># 组合数学</a>
+              <a href="/tags/%E7%90%90%E8%AE%B0/" rel="tag"># 琐记</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/yozora-Round3/" rel="prev" title="yozora Round 3">
-                  <i class="fa fa-chevron-left"></i> yozora Round 3
+                <a href="/2022/yume-2/" rel="prev" title="「琐记」#2">
+                  <i class="fa fa-chevron-left"></i> 「琐记」#2
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/lg4139-solution/" rel="next" title="luogu4139 上帝与集合的正确用法 题解">
-                  luogu4139 上帝与集合的正确用法 题解 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -464,12 +472,12 @@ ll <span class="token function">gcd</span><span class="token punctuation">(</spa
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
   <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
-  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://miku01ck.xyz/2021/lg3166-solution/"}</script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://miku01ck.xyz/2022/yume-3/"}</script>
   <script src="/js/third-party/quicklink.js"></script>
 <script class="next-config" data-name="twikoo" type="application/json">{"enable":true,"visitor":false,"envId":"myhexo-0g6qpsti0d3fe3af","el":"#twikoo-comments"}</script>
 <script>
