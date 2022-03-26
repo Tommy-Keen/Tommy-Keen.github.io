@@ -31,7 +31,7 @@
 <meta property="og:description" content="不难发现，给出的是一个基环树森林。 渡船的使用条件，实际上是：离开一颗基环树后，就不能再回来。 题目要求走过的路最长，不难想到是基环树的直径。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-10-01T13:12:35.000Z">
-<meta property="article:modified_time" content="2021-12-19T09:38:16.581Z">
+<meta property="article:modified_time" content="2022-03-26T03:23:57.481Z">
 <meta property="article:author" content="Sz_zUwu">
 <meta property="article:tag" content="基环树">
 <meta property="article:tag" content="单调队列优化">
@@ -95,9 +95,9 @@
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
         <li class="menu-item menu-item-友链"><a href="/links/" rel="section"><i class="fas fa-user-friends fa-fw"></i>友链</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">48</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">47</span></a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">9</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">86</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">82</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -168,7 +168,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">86</span>
+          <span class="site-state-item-count">82</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -179,7 +179,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">48</span>
+        <span class="site-state-item-count">47</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -276,7 +276,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-12-19 17:38:16" itemprop="dateModified" datetime="2021-12-19T17:38:16+08:00">2021-12-19</time>
+      <time title="修改时间：2022-03-26 11:23:57" itemprop="dateModified" datetime="2022-03-26T11:23:57+08:00">2022-03-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -303,7 +303,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2k</span>
+      <span>1.9k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -334,27 +334,22 @@
 <p>最终答案为每颗基环树直径的和。</p>
 <p>对于第一种情况，找到环后，以环上的每个节点为根，在它的子树中跑 DP
 求最长链就行了。</p>
-<p>设以环上节点 <span class="math inline">\(\large x\)</span>
-为根，不经过换上节点，能够到达的最远距离为 <span
+<p>设以环上节点 $ x$ 为根，不经过换上节点，能够到达的最远距离为 <span
 class="math inline">\(d(x)\)</span>，两点间距离为 <span
-class="math inline">\(\large dis(x,y)\)</span>。</p>
-<p>第二种情况仅仅是：选择两个环上的点 <span class="math inline">\(\large
-(i,j)\)</span>，最大化 <span class="math inline">\(\large
-d(i)+d(j)+dis(i,j)\)</span>。</p>
+class="math inline">\(dis(x,y)\)</span>。</p>
+<p>第二种情况仅仅是：选择两个环上的点 $ (i,j)$，最大化 <span
+class="math inline">\(d(i)+d(j)+dis(i,j)\)</span>。</p>
 <p>考虑环形 DP
 的处理方案，我们将环断开并复制一倍，用单调队列优化点的枚举。</p>
 <p>用前缀和处理两点间的距离，设其为 <span
 class="math inline">\(S\)</span>。</p>
-<p>设环为 <span class="math inline">\(\large u\)</span>。</p>
-<p>在队头维护：满足 <span class="math inline">\(\large
-d(u_i)+d(u_j)+S(u_j)-S(u_i)\)</span> 的最大的 <span
-class="math inline">\(\large u_j\)</span>。</p>
-<p>在队尾维护：<span class="math inline">\(\large d(u_r)-S(u_r)\)</span>
-单调减。</p>
+<p>设环为 $ u$。</p>
+<p>在队头维护：满足 <span
+class="math inline">\(d(u_i)+d(u_j)+S(u_j)-S(u_i)\)</span> 的最大的 $
+u_j$。</p>
+<p>在队尾维护：$ d(u_r)-S(u_r)$ 单调减。</p>
 <p>环上两点有顺时针和逆时针两个距离，本题无负权，所以其中一个距离一定大于另一个。</p>
-<p>若环上有 <span class="math inline">\(\large p\)</span>
-个节点，则在队头排除距离小于 <span class="math inline">\(\large
-i-p\)</span> 的决策。</p>
+<p>若环上有 $ p$ 个节点，则在队头排除距离小于 $ i-p$ 的决策。</p>
 <p>实现时注意细节。</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h></span></span>
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>

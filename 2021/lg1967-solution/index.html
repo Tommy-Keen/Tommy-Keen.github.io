@@ -31,7 +31,7 @@
 <meta property="og:description" content="题目要求不超过限重，不难想到因该最大化每条路的限重。所以在原图上求出最大生成树。 那么对于点 \((x,y)\)，如果在并查集中 \(x\) 与 \(y\) 不在同一个集合，则 \(x\) 不能到达 \(y\)">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-10-10T13:46:18.000Z">
-<meta property="article:modified_time" content="2021-12-19T09:35:40.459Z">
+<meta property="article:modified_time" content="2022-03-26T03:14:45.499Z">
 <meta property="article:author" content="Sz_zUwu">
 <meta property="article:tag" content="最近公共祖先">
 <meta property="article:tag" content="生成树">
@@ -96,9 +96,9 @@
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
         <li class="menu-item menu-item-友链"><a href="/links/" rel="section"><i class="fas fa-user-friends fa-fw"></i>友链</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">48</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">47</span></a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">9</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">86</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">82</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -169,7 +169,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">86</span>
+          <span class="site-state-item-count">82</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -180,7 +180,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">48</span>
+        <span class="site-state-item-count">47</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -277,7 +277,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-12-19 17:35:40" itemprop="dateModified" datetime="2021-12-19T17:35:40+08:00">2021-12-19</time>
+      <time title="修改时间：2022-03-26 11:14:45" itemprop="dateModified" datetime="2022-03-26T11:14:45+08:00">2022-03-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -304,7 +304,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2k</span>
+      <span>1.9k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -329,22 +329,17 @@ class="math inline">\(y\)</span> 不在同一个集合，则 <span
 class="math inline">\(x\)</span> 不能到达 <span
 class="math inline">\(y\)</span></p>
 <span id="more"></span>
-<p>接下来就是每辆车最多运送的货物，不难想到最多运送的货物就是 <span
-class="math inline">\(\large (x \rightarrow y)\)</span>
+<p>接下来就是每辆车最多运送的货物，不难想到最多运送的货物就是 $ (x y)$
 路径上权值最小的边。</p>
-<p>如果用朴素的算法去求最小的边权，那么复杂度会上天，<span
-class="math inline">\(\large O(n)\)</span>。</p>
+<p>如果用朴素的算法去求最小的边权，那么复杂度会上天，$ O(n)$。</p>
 <p>联系我们对想上标记法的倍增优化，不难想到对求路径上最小的边权进行倍增优化。</p>
-<p>设 <span class="math inline">\(\large d(x,k)\)</span> 为节点 <span
+<p>设 <span class="math inline">\(d(x,k)\)</span> 为节点 <span
 class="math inline">\(\large x\)</span> 到它的 <span
-class="math inline">\(\large 2^k\)</span>
-辈祖先这条路径上最小的边权。</p>
+class="math inline">\(2^k\)</span> 辈祖先这条路径上最小的边权。</p>
 <p>接着不难想到转移 <span class="math display">\[
-\large d(x,k)=\min{ \{ d(x,k-1),d(f(x,k-1),k-1) \} } \quad k \le \log_2n
-\]</span> 可以在求 <span class="math inline">\(\large f\)</span>
-数组的同时求出。</p>
-<p>所以，在求 LCA 的过程中不断维护路径上最小的 <span
-class="math inline">\(\large d(x,k)\)</span>。</p>
+d(x,k)=\min{ \{ d(x,k-1),d(f(x,k-1),k-1) \} } \quad k \le \log_2n
+\]</span> 可以在求 $ f$ 数组的同时求出。</p>
+<p>所以，在求 LCA 的过程中不断维护路径上最小的 $ d(x,k)$。</p>
 <p>这题毒瘤数据，给出的图不一定联通。</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h></span></span>
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>

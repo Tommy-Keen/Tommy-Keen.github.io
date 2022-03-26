@@ -29,7 +29,6 @@ https://miku01ck.xyz/2022/mz/
 https://miku01ck.xyz/2021/dec4th/
 https://miku01ck.xyz/2021/ame-koe/
 https://miku01ck.xyz/2021/oi/
-https://miku01ck.xyz/2021/CF1179D-solution/
 https://miku01ck.xyz/2021/yozora-Round6/
 https://miku01ck.xyz/2021/yozora-Round5/
 https://miku01ck.xyz/2021/yozora-Round4/
@@ -54,7 +53,6 @@ https://miku01ck.xyz/2021/lg4819-solution/
 https://miku01ck.xyz/2021/Miku-14th/
 https://miku01ck.xyz/2021/recollect-summer2021/
 https://miku01ck.xyz/2021/bzoj2863-solution/
-https://miku01ck.xyz/2021/lg4644-solution/
 https://miku01ck.xyz/2021/lg2155-solution/
 https://miku01ck.xyz/2021/lg4139-solution/
 https://miku01ck.xyz/2021/lg3166-solution/
@@ -65,11 +63,9 @@ https://miku01ck.xyz/2021/lg2568-solution/
 https://miku01ck.xyz/2021/solution-cf451e/
 https://miku01ck.xyz/2021/lg2480-solution/
 https://miku01ck.xyz/2021/yozora-Round-2/
-https://miku01ck.xyz/2021/UVa1292-solution/
 https://miku01ck.xyz/2021/lg2862-solution/
 https://miku01ck.xyz/2021/lg2986-solution/
 https://miku01ck.xyz/2021/yozora-round-1/
-https://miku01ck.xyz/2021/loj10189-solution/
 https://miku01ck.xyz/2021/loj2691-solution/
 https://miku01ck.xyz/2021/CF1061C-solution/
 https://miku01ck.xyz/2021/lg3288-solution/
