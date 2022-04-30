@@ -9797,10 +9797,10 @@ c\end{bmatrix}\)</span></p>
 <p>矩阵加法依旧是对应位置相加。</p>
 <h3 id="矩阵乘法">矩阵乘法</h3>
 <p>即连续多次矩阵变化，注意矩阵乘法是从右往左读的。</p>
-对于两个 <span class="math inline">\(2 \times 2\)</span> 的矩阵 $ A =
+对于两个 <span class="math inline">\(2 \times 2\)</span> 的矩阵 $ A=$ $
 <span class="math display">\[\begin{bmatrix} e &amp; f \\ g &amp; h
 \end{bmatrix}\]</span>
-<span class="math inline">\(，\)</span> B =
+<span class="math inline">\(，\)</span>B =$ $
 <span class="math display">\[\begin{bmatrix} a &amp; b \\ c &amp; d
 \end{bmatrix}\]</span>
 <p>$，要计算 $ C = B A$，先要用 $ A$ 将单位向量变换为 <span
@@ -9846,7 +9846,8 @@ class="math inline">\(n\)</span> 项。</p>
 使用待定系数法，设 <span class="math inline">\(\begin{bmatrix} F_n \\
 F_{n-1} \end{bmatrix} = \begin{bmatrix} a &amp; b \\ c &amp; d
 \end{bmatrix} \begin{bmatrix} F_{n-1} \\ F_{n-2}
-\end{bmatrix}\)</span>，考虑递推式，很容易求出这个矩阵 $ A =
+\end{bmatrix}\)</span>，考虑递推式，很容易求出这个矩阵为 <span
+class="math inline">\(A =\)</span> $
 <span class="math display">\[\begin{bmatrix} 1 &amp; 1 \\ 1 &amp;
 0  \end{bmatrix}\]</span>
 <p>$。</p>
