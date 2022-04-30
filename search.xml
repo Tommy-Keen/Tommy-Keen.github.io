@@ -9783,9 +9783,9 @@ x_2 \\ y_2 \end{bmatrix}\)</span>
 的<strong>矩阵</strong>。</p>
 <p>线性变换可以看作矩阵向量乘法，或者说矩阵能对向量进行线性变换。矩阵可以用大写字母表示。
 <span class="math display">\[
-\bold{A} \vec p = \begin{bmatrix} x_1 &amp; x_2 \\ y_1 &amp; y_2
-\end{bmatrix} \begin{bmatrix} a \\ b \end{bmatrix}   = \begin{bmatrix} a
-x_1 + b x_2 \\ a y_1 + b y_2 \end{bmatrix}
+A \vec p = \begin{bmatrix} x_1 &amp; x_2 \\ y_1 &amp; y_2 \end{bmatrix}
+\begin{bmatrix} a \\ b \end{bmatrix}   = \begin{bmatrix} a x_1 + b x_2
+\\ a y_1 + b y_2 \end{bmatrix}
 \]</span> 一些简单的变换。</p>
 <p>将向量逆时针旋转 90 度： <span class="math inline">\(\begin{bmatrix}
 0 &amp; -1 \\ 1 &amp; 0\end{bmatrix}\)</span></p>
@@ -9797,33 +9797,32 @@ c\end{bmatrix}\)</span></p>
 <p>矩阵加法依旧是对应位置相加。</p>
 <h3 id="矩阵乘法">矩阵乘法</h3>
 <p>即连续多次矩阵变化，注意矩阵乘法是从右往左读的。</p>
-<p>对于两个 <span class="math inline">\(2 \times 2\)</span> 的矩阵 <span
-class="math inline">\(\bold{A} = \begin{bmatrix} e &amp; f \\ g &amp; h
-\end{bmatrix}\)</span>，<span class="math inline">\(\bold{B} =
-\begin{bmatrix} a &amp; b \\ c &amp; d \end{bmatrix}\)</span>，要计算
-<span class="math inline">\(\bold{C} = \bold{B}
-\bold{A}\)</span>，先要用 <span class="math inline">\(\bold{A}\)</span>
-将单位向量变换为 <span class="math inline">\(\begin{bmatrix} e \\ g
-\end{bmatrix}\)</span> 和 <span class="math inline">\(\begin{bmatrix} f
-\\ h \end{bmatrix}\)</span>，再将它们分别与 <span
+对于两个 <span class="math inline">\(2 \times 2\)</span> 的矩阵 $ A =
+<span class="math display">\[\begin{bmatrix} e &amp; f \\ g &amp; h
+\end{bmatrix}\]</span>
+<span class="math inline">\(，\)</span> B =
+<span class="math display">\[\begin{bmatrix} a &amp; b \\ c &amp; d
+\end{bmatrix}\]</span>
+<p>$，要计算 $ C = B A$，先要用 $ A$ 将单位向量变换为 <span
+class="math inline">\(\begin{bmatrix} e \\ g \end{bmatrix}\)</span> 和
+<span class="math inline">\(\begin{bmatrix} f \\ h
+\end{bmatrix}\)</span>，再将它们分别与 <span
 class="math inline">\(B\)</span> 变换得到两个向量，<span
 class="math inline">\(\begin{bmatrix} ae + bg \\ cd +dg
 \end{bmatrix}\)</span> 和 <span class="math inline">\(\begin{bmatrix}
 af+bh\\ cf +dh \end{bmatrix}\)</span></p>
 <p>最后加起来，得到 <span class="math display">\[
-\bold{C} = \begin{bmatrix} ae + bg &amp; af+bh\\ cd +dg &amp; cf +dh
+C = \begin{bmatrix} ae + bg &amp; af+bh\\ cd +dg &amp; cf +dh
 \end{bmatrix}
 \]</span></p>
-<p>矩阵乘法不满足交换律，即 <span class="math inline">\(\bold{B}
-\bold{A}\)</span> 不一定等于 $ $。但是满足结合律，即 <span
-class="math display">\[
-(\bold{A} \bold{B})  \bold{C}  =  \bold{A} (\bold{B}  \bold{C} )
+<p>矩阵乘法不满足交换律，即 $ B A$ 不一定等于 $A B $。但是满足结合律，即
+<span class="math display">\[
+( A B)  C  =  A (B  C )
 \]</span>
 对于更高维度，这么去算显然会去世，所以有了本文唯一有价值的公式：对于
 <span class="math inline">\(L\)</span> 维矩阵 <span
-class="math inline">\(\bold{C} = \bold{A} \bold{B}\)</span>，有 <span
-class="math display">\[
-\bold{C}_{i,j} =  \sum_{k=1}^L \bold{A}_{i,k} B_{k,j}
+class="math inline">\(C = A B\)</span>，有 <span class="math display">\[
+C_{i,j} =  \sum_{k=1}^L A_{i,k} B_{k,j}
 \]</span> 代码</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">struct</span> <span class="token class-name">Matrix</span> <span class="token punctuation">&#123;</span>
 	<span class="token keyword">long</span> <span class="token keyword">long</span> M<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
@@ -9844,14 +9843,15 @@ Matrix <span class="token keyword">operator</span><span class="token operator">*
 class="math inline">\(n\)</span> 项。</p>
 <p>考虑当 <span class="math inline">\(n \ge 3\)</span>
 的时候，每一项都与前两项有关，且递推就相当于线性变换的过程。</p>
-<p>使用待定系数法，设 <span class="math inline">\(\begin{bmatrix} F_n \\
+使用待定系数法，设 <span class="math inline">\(\begin{bmatrix} F_n \\
 F_{n-1} \end{bmatrix} = \begin{bmatrix} a &amp; b \\ c &amp; d
 \end{bmatrix} \begin{bmatrix} F_{n-1} \\ F_{n-2}
-\end{bmatrix}\)</span>，考虑递推式，很容易求出这个矩阵 <span
-class="math inline">\(\bold{A} = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 0
-\end{bmatrix}\)</span>。</p>
+\end{bmatrix}\)</span>，考虑递推式，很容易求出这个矩阵 $ A =
+<span class="math display">\[\begin{bmatrix} 1 &amp; 1 \\ 1 &amp;
+0  \end{bmatrix}\]</span>
+<p>$。</p>
 <p>那么 <span class="math inline">\(\begin{bmatrix} F_3 \\ F_2
-\end{bmatrix} = \bold{A} \begin{bmatrix} 1 \\ 1
+\end{bmatrix} = A \begin{bmatrix} 1 \\ 1
 \end{bmatrix}\)</span>。归纳一下得到 <span class="math display">\[
 \begin{bmatrix} F_n \\ F_{n-1}  \end{bmatrix} = A^{n-2} \begin{bmatrix}
 1 \\ 1 \end{bmatrix}
@@ -9860,7 +9860,7 @@ class="math inline">\(O(\log_2 n)\)</span>。</p>
 <p>代码略。</p>
 <h2 id="写在后面">写在后面</h2>
 <p>个人感觉洛谷的深入浅出进阶篇这里讲的很不错，没有那么实用主义，直接去讲矩阵乘法和加速递推等等实用技巧。但是有很多我这种连向量都没有接触过的人，如此从向量开始，一直引出各种线代里的概念，最后落实到
-OI里面，我觉得很有意义。</p>
+OI 里面，我觉得很有意义。</p>
 <p>如果真的像大部分人学文化课那样，连推导、原理等都不清楚直接研究做题技巧，那么
 OI 也就没意义了吧。</p>
 ]]></content>
