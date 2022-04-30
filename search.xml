@@ -3892,12 +3892,12 @@ ll p<span class="token punctuation">,</span> mxd<span class="token punctuation">
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><p>设 $ f_{i,j}$ 为以 <span class="math inline">\(i\)</span>
 为根的子树中，节点 <span class="math inline">\(i\)</span> 映射到图中节点
 <span class="math inline">\(j\)</span> 的方案数。</p>
-<span id="more"></span>
 <p>转移 <span class="math display">\[
 f_{x,i} = \prod_{y \in son(x)} \sum_{j \in G}{f_{y,j}}
-\]</span> 答案为 <span class="math inline">\(\sum_{i \in [1,n]}
+\]</span> <span id="more"></span></p>
+<p>答案为 <span class="math inline">\(\sum_{i \in [1,n]}
 f_{1,i}\)</span></p>
-<p>复杂度是 $ O(3^n n)$ 的。</p>
+<p>复杂度是 $ O(3^n n)$ 的，考虑优化。</p>
 <p>题目给出了两条限制</p>
 <ol type="1">
 <li>每条树边都要在图中出现</li>
