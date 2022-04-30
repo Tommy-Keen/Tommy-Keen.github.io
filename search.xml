@@ -9566,4 +9566,143 @@ OIer。</p>
         <tag>琐记</tag>
       </tags>
   </entry>
+  <entry>
+    <title>luogu5588 小猪佩奇爬树 题解</title>
+    <url>/2022/lg5588-solution/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="分析">分析</h2>
+<p>分类讨论一下。</p>
+<p>对于颜色 <span class="math inline">\(w_i\)</span></p>
+<p>若 <span class="math inline">\(w_i
+=0\)</span>，随便选两个点都可以，<span class="math inline">\(\frac{n
+(n-1)}{2}\)</span>。</p>
+<p>若 <span class="math inline">\(w_i = 1\)</span>，设这个点为 <span
+class="math inline">\(x\)</span>，那么只要两个点之间的路径经过 <span
+class="math inline">\(x\)</span>，就是合法的。<span id="more"></span>为了不重不漏，要按照一定的顺序去计算。对于一条边
+<span class="math inline">\((x \rightarrow y)\)</span>，我们先令答案累加
+<span class="math inline">\(sz_x \cdot sz_y\)</span>，再将 <span
+class="math inline">\(sz_x\)</span> 加上 <span
+class="math inline">\(sz_y\)</span>。最后累加 <span
+class="math inline">\(sz_x \cdot
+(n-sz_x)\)</span>。手算一下就知道是对的，可以直接处理任何一个节点的颜色数量为
+1 的情况，直接查询即可。</p>
+<p>可是对于其他情况就不是那么好处理了。不难想到对于 <span
+class="math inline">\(w_i
+&gt;1\)</span>，由于两点间有且仅有一条简单路径，所以想要经过所有这个颜色的点，就必须保证这些点全部都在同一条链上，也就是端点数量为
+2。</p>
+<p>图中的蓝色就无法找到合法的点对，贡献为 0。</p>
+<figure>
+<img data-src="https://s2.loli.net/2022/04/30/UcuIbZlRiQXEoMT.png"
+alt="没有贡献" />
+<figcaption aria-hidden="true">没有贡献</figcaption>
+</figure>
+<p>图中红色的分布就在一条链上，不难发现贡献是左端点的子树大小乘右端点子树大小。</p>
+<figure>
+<img data-src="https://s2.loli.net/2022/04/30/QAXMYjbgv6ma3ky.png"
+alt="能够产生贡献" />
+<figcaption aria-hidden="true">能够产生贡献</figcaption>
+</figure>
+<p> </p>
+<p>如何快速统计同一种颜色的分布情况呢？对于每种颜色单独处理是不行的。</p>
+<p>在 dfs 的过程中，设当前节点为 <span
+class="math inline">\(x\)</span>，颜色为 <span
+class="math inline">\(c_x\)</span>，设 <span
+class="math inline">\(pre_{c_x}\)</span> 为 颜色 <span
+class="math inline">\(c_x\)</span> 的链上，到 <span
+class="math inline">\(x\)</span>
+的位置时经过的点数。用一个变量<code>fg</code>维护信息。（因为非链就不会产生贡献，不影响答案）</p>
+<p>如果 <span class="math inline">\(x\)</span> 是端点且此时 <span
+class="math inline">\(pre_{c_x}=0\)</span>，那么搜索完与 <span
+class="math inline">\(x\)</span> 直接相连的边后最多让颜色 <span
+class="math inline">\(c_x\)</span> 的点的个数
++1。相邻节点有颜色相同的，让<code>fg+=1</code>。</p>
+<p>如果 <span class="math inline">\(pre_{c_x} \neq 0\)</span> 或者不是
+<span class="math inline">\(c_x\)</span>
+的最后一个节点，那么就让<code>fg+=1</code>，这两种情况都会让 <span
+class="math inline">\(x\)</span>
+可能为端点。（硬说的话前者是有机会成为后搜索到的端点，后者是有机会成为先搜索到的端点）</p>
+<p>可以对着下面的图理解。</p>
+<p>这样如果 <span
+class="math inline">\(fg=1\)</span>，那么就一定是一个端点了。</p>
+<p>然后记录左右端点，设它们为 <span
+class="math inline">\((x,y)\)</span>。</p>
+<p>对于下图情况，直接让 <span class="math inline">\(sz_x \cdot
+sz_y\)</span></p>
+<p><img data-src="https://s2.loli.net/2022/04/30/KeP5mGdpYcBb69A.png" /></p>
+<p>对于下图情况，设 <span
+class="math inline">\(dep_x&gt;dep_y\)</span>，<span
+class="math inline">\(x\)</span> 到 <span
+class="math inline">\(y\)</span> 的链上第一个经过点是 <span
+class="math inline">\(z\)</span>，那么答案是 <span
+class="math inline">\(sz_y \cdot (n-sz_z)\)</span></p>
+<p><img data-src="https://s2.loli.net/2022/04/30/zniNcKvrRAsLkjW.png" /></p>
+<p>实现的时候要用好多映射，就不一一写了。</p>
+<h2 id="code">CODE</h2>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h></span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> N<span class="token operator">=</span><span class="token number">1e6</span><span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> n<span class="token punctuation">,</span> col<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">,</span> cnt<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">,</span> pre<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">,</span> sz<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">long</span> <span class="token keyword">long</span> ans1<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">,</span> ans2<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> cc<span class="token punctuation">,</span> h<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">,</span> p<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">,</span> v<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">struct</span> <span class="token class-name">node</span> <span class="token punctuation">&#123;</span> <span class="token keyword">int</span> nxt<span class="token punctuation">,</span> to<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span> e<span class="token punctuation">[</span>N<span class="token operator">&lt;&lt;</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
+<span class="token keyword">void</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span><span class="token keyword">int</span> y<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+	e<span class="token punctuation">[</span><span class="token operator">++</span>cc<span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">&#123;</span>h<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">,</span>y<span class="token punctuation">&#125;</span><span class="token punctuation">,</span> h<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token operator">=</span>cc<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">// cnt[i]，颜色i的总数</span>
+<span class="token comment">// col[i]，i的颜色</span>
+<span class="token comment">// pre[i]，颜色为i的链上已经经过的点数</span>
+<span class="token keyword">void</span> <span class="token function">dfs</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span><span class="token keyword">int</span> fa<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+	<span class="token keyword">int</span> c<span class="token operator">=</span>col<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">,</span> t<span class="token operator">=</span>pre<span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token punctuation">,</span> fg<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> z<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+	sz<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span>h<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">;</span>i<span class="token punctuation">;</span>i<span class="token operator">=</span>e<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>nxt<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">int</span> y<span class="token operator">=</span>e<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>to<span class="token punctuation">;</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span>y<span class="token operator">==</span>fa<span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span>
+		<span class="token keyword">int</span> lst<span class="token operator">=</span>pre<span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token comment">// 这里没有算上x</span>
+		<span class="token function">dfs</span><span class="token punctuation">(</span>y<span class="token punctuation">,</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		ans1<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token operator">+=</span><span class="token number">1ll</span><span class="token operator">*</span>sz<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token operator">*</span>sz<span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token punctuation">;</span>
+		sz<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token operator">+=</span>sz<span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token punctuation">;</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span>lst<span class="token operator">!=</span>pre<span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">++</span>fg<span class="token punctuation">,</span> z<span class="token operator">=</span>y<span class="token punctuation">;</span>
+        <span class="token comment">// 搜到了相同的颜色，记录z</span>
+	<span class="token punctuation">&#125;</span>
+	ans1<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token operator">+=</span><span class="token number">1ll</span><span class="token operator">*</span>sz<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token operator">*</span><span class="token punctuation">(</span>n<span class="token operator">-</span>sz<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>t<span class="token operator">||</span>pre<span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token operator">+</span><span class="token number">1</span><span class="token operator">!=</span>cnt<span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">++</span>fg<span class="token punctuation">;</span>
+	<span class="token operator">++</span>pre<span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// x也在pre[c]的链上</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>fg<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>v<span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token punctuation">)</span> p<span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token operator">=</span>x<span class="token punctuation">;</span>
+		<span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+			<span class="token keyword">int</span> s<span class="token operator">=</span>z<span class="token operator">?</span> n<span class="token operator">-</span>sz<span class="token punctuation">[</span>z<span class="token punctuation">]</span><span class="token operator">:</span>sz<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token comment">// n-sz[z]的情况实际是搜索到的第一个这个颜色的节点就是端点</span>
+			ans2<span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1ll</span><span class="token operator">*</span>sz<span class="token punctuation">[</span>p<span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token operator">*</span>s<span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span>
+		<span class="token operator">++</span>v<span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 端点数量</span>
+	<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+	<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span><span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>col<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token operator">++</span>cnt<span class="token punctuation">[</span>col<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span> p<span class="token punctuation">[</span>col<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token operator">=</span>i<span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span><span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">int</span> x<span class="token punctuation">,</span> y<span class="token punctuation">;</span> <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d%d"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>x<span class="token punctuation">,</span><span class="token operator">&amp;</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token function">add</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">add</span><span class="token punctuation">(</span>y<span class="token punctuation">,</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+	<span class="token function">dfs</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span><span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>cnt<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%lld\n"</span><span class="token punctuation">,</span><span class="token number">1ll</span><span class="token operator">*</span>n<span class="token operator">*</span><span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>cnt<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%lld\n"</span><span class="token punctuation">,</span>ans1<span class="token punctuation">[</span>p<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 注意i是颜色，要用p[i]映射过去</span>
+		<span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>v<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%lld\n"</span><span class="token punctuation">,</span>ans2<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 有两个端点</span>
+		<span class="token keyword">else</span> <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"0"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+]]></content>
+      <categories>
+        <category>题解</category>
+      </categories>
+      <tags>
+        <tag>树上问题</tag>
+      </tags>
+  </entry>
 </search>
