@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://miku01ck.xyz/2022/notes-linear-algebra-1/</loc>
+    
+    <lastmod>2022-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://miku01ck.xyz/2022/yume-8/</loc>
     
     <lastmod>2022-05-01</lastmod>
@@ -23,15 +32,6 @@
     <loc>https://miku01ck.xyz/2022/lg6185-solution/</loc>
     
     <lastmod>2022-05-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://miku01ck.xyz/2022/notes-linear-algebra-1/</loc>
-    
-    <lastmod>2022-04-30</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
