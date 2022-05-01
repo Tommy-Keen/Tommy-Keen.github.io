@@ -9883,8 +9883,8 @@ OI 也就没意义了吧。</p>
 class="math inline">\(i\)</span> 的逆序对数，那么经过 <span
 class="math inline">\(k\)</span> 轮冒泡排序后，逆序对的个数为 <span
 class="math display">\[
-\sum_{i \in [1,n] 且 f_i &gt; k} f_i - k \cdot \sum_{i \in [1,n]} [f_i
-&gt; k]
+\sum_{ i=1  \text{ and } f_i &gt; k}^n f_i - k \cdot \sum_{i \in [1,n]}
+[f_i &gt; k]
 \]</span> 树状数组维护之，具体见代码。交换的操作分类讨论就行了。</p>
 <h2 id="code">CODE</h2>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h></span></span>
