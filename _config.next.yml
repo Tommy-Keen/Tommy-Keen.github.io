@@ -1,0 +1,120 @@
+custom_file_path:
+  bodyEnd: source/_data/body-end.njk
+  style: source/_data/styles.styl
+
+scheme: Mist
+darkmode: false
+
+menu:
+  home: / || fa fa-home
+  about: /about/ || fa fa-user
+  友链: /links/ || fas fa-user-friends
+  tags: /tags/ || fa fa-tags
+  categories: /categories/ || fa fa-th
+  archives: /archives/ || fa fa-archive
+
+menu_settings:
+  icons: true
+  badges: false
+
+sidebar:
+  position: right
+  display: post
+  padding: 18
+  offset: 12
+
+avatar:
+  url: /images/qiaoling.jpg
+
+social:
+  GitHub: https://github.com/Tommy-Keen || fab fa-github
+  BiliBili: https://space.bilibili.com/389165680 || fas fa-tv
+
+footer:
+  since: 2021
+
+creative_commons:
+  license: by-nc-sa
+  size: small
+  sidebar: true
+  post: true
+
+post_meta:
+  item_text: true
+  created_at: true
+  updated_at:
+    enable: true
+    another_day: true
+  categories: true
+
+symbols_count_time:
+  separated_meta: true
+  item_text_total: false
+
+codeblock:
+  copy_button:
+    enable: true
+
+back2top:
+  enable: true
+  sidebar: false
+  scrollpercent: true
+
+reading_progress:
+  enable: true
+
+google_site_verification: j1x0aj8z_yTzMf4418HVYztivD-T9K_6wF6q48fGAm4
+bing_site_verification: de7409d7fe91436eab14ea4062b1ba87
+baidu_site_verification: 7kBMv6UJrb5yCmuU
+
+math:
+  mathjax:
+    enable: true
+    tags: none
+
+fancybox: true
+lazyload: true
+quicklink:
+  enable: true
+  home: true
+  archive: true
+  delay: true
+  timeout: 3000
+  priority: true
+
+motion:
+  enable: true
+  async: false
+  transition:
+    post_block: fadeIn
+    post_header: fadeInDown
+    post_body: fadeInDown
+    coll_header: fadeInLeft
+    sidebar: fadeInUp
+
+comments:
+  style: tabs
+  storage: true
+  lazyload: false
+
+busuanzi_count:
+  enable: false
+  total_visitors: true
+  total_visitors_icon: fa fa-user
+  total_views: true
+  total_views_icon: fa fa-eye
+  post_views: true
+  post_views_icon: far fa-eye
+
+local_search:
+  enable: true
+  top_n_per_article: 1
+  unescape: false
+  preload: false
+
+font:
+  enable: true
+  host: https://fonts.loli.net
+  global:
+    external: true
+    family: Noto Serif SC
