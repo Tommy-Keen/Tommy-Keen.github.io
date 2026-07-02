@@ -7,6 +7,7 @@
     "clean": "hexo clean",
     "server": "hexo server",
     "dev": "hexo server",
+    "preview": "hexo clean && hexo server",
     "new:post": "hexo new post",
     "new:page": "hexo new page"
   },
@@ -15,6 +16,7 @@
   },
   "dependencies": {
     "hexo": "^7.0.0",
+    "hexo-auto-excerpt": "^1.1.2",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index": "^3.0.0",

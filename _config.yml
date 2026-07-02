@@ -64,6 +64,8 @@ index_generator:
   per_page: 10
   order_by: -date
 
+excerpt_length: 260
+
 # Category & Tag
 default_category: uncategorized
 category_map:
