@@ -1,6 +1,7 @@
 ---
 title: 友链
 date: 2026-07-02 17:30:00
+comments: false
 ---
 
 <div class="friend-grid">
