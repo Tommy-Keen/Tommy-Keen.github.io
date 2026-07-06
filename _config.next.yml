@@ -98,6 +98,22 @@ comments:
   storage: true
   lazyload: false
 
+giscus:
+  enable: true
+  repo: Tommy-Keen/Tommy-Keen.github.io
+  repo_id: R_kgDOHVVyYA
+  category: Announcements
+  category_id: DIC_kwDOHVVyYM4DAlL9
+  mapping: pathname
+  strict: 0
+  reactions_enabled: 1
+  emit_metadata: 0
+  theme: light
+  lang: zh-CN
+  crossorigin: anonymous
+  input_position: bottom
+  loading: lazy
+
 busuanzi_count:
   enable: false
   total_visitors: true
