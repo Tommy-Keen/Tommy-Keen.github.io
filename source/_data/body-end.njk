@@ -1,3 +1,33 @@
+<script>
+document.addEventListener('page:loaded', () => {
+  if (!CONFIG.page.isPost) return;
+
+  const container = document.querySelector('.giscus-container');
+  if (!container) return;
+
+  NexT.utils.loadComments('.giscus-container')
+    .then(() => NexT.utils.getScript('https://giscus.app/client.js', {
+      attributes: {
+        async                   : true,
+        crossOrigin             : 'anonymous',
+        'data-repo'             : 'Tommy-Keen/Tommy-Keen.github.io',
+        'data-repo-id'          : 'R_kgDOHVVyYA',
+        'data-category'         : 'Announcements',
+        'data-category-id'      : 'DIC_kwDOHVVyYM4DAlL9',
+        'data-mapping'          : 'pathname',
+        'data-strict'           : '0',
+        'data-reactions-enabled': '1',
+        'data-emit-metadata'    : '0',
+        'data-input-position'   : 'bottom',
+        'data-theme'            : 'light',
+        'data-lang'             : 'zh-CN',
+        'data-loading'          : 'lazy'
+      },
+      parentNode: container
+    }));
+});
+</script>
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
