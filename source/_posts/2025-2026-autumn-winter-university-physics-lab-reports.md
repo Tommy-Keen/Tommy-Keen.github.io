@@ -16,8 +16,10 @@ tags:
 
 姚星星，93/100.
 
-[打开 PDF](/files/2025-2026-physics-lab-reports/01-polarization-application-study.pdf)
-<iframe src="/files/2025-2026-physics-lab-reports/01-polarization-application-study.pdf" width="100%" height="900" style="border:1px solid #ddd;border-radius:10px;" loading="lazy"></iframe>
+<div class="pdf-preview" data-pdf-url="/files/2025-2026-physics-lab-reports/01-polarization-application-study.pdf">
+  <button class="pdf-preview-button" type="button">展开预览</button>
+  <div class="pdf-preview-frame"></div>
+</div>
 
 <hr>
 
@@ -25,8 +27,10 @@ tags:
 
 乐静飞，93/100.
 
-[打开 PDF](/files/2025-2026-physics-lab-reports/02-light-speed-measurement.pdf)
-<iframe src="/files/2025-2026-physics-lab-reports/02-light-speed-measurement.pdf" width="100%" height="900" style="border:1px solid #ddd;border-radius:10px;" loading="lazy"></iframe>
+<div class="pdf-preview" data-pdf-url="/files/2025-2026-physics-lab-reports/02-light-speed-measurement.pdf">
+  <button class="pdf-preview-button" type="button">展开预览</button>
+  <div class="pdf-preview-frame"></div>
+</div>
 
 <hr>
 
@@ -34,8 +38,10 @@ tags:
 
 张贯乔，94/100.
 
-[打开 PDF](/files/2025-2026-physics-lab-reports/03-youngs-modulus-metal-materials.pdf)
-<iframe src="/files/2025-2026-physics-lab-reports/03-youngs-modulus-metal-materials.pdf" width="100%" height="900" style="border:1px solid #ddd;border-radius:10px;" loading="lazy"></iframe>
+<div class="pdf-preview" data-pdf-url="/files/2025-2026-physics-lab-reports/03-youngs-modulus-metal-materials.pdf">
+  <button class="pdf-preview-button" type="button">展开预览</button>
+  <div class="pdf-preview-frame"></div>
+</div>
 
 <hr>
 
@@ -43,8 +49,10 @@ tags:
 
 张寒洁，93/100.
 
-[打开 PDF](/files/2025-2026-physics-lab-reports/04-speed-of-sound-measurement.pdf)
-<iframe src="/files/2025-2026-physics-lab-reports/04-speed-of-sound-measurement.pdf" width="100%" height="900" style="border:1px solid #ddd;border-radius:10px;" loading="lazy"></iframe>
+<div class="pdf-preview" data-pdf-url="/files/2025-2026-physics-lab-reports/04-speed-of-sound-measurement.pdf">
+  <button class="pdf-preview-button" type="button">展开预览</button>
+  <div class="pdf-preview-frame"></div>
+</div>
 
 <hr>
 
@@ -52,8 +60,10 @@ tags:
 
 张建华，88/100.
 
-[打开 PDF](/files/2025-2026-physics-lab-reports/05-ferromagnetic-hysteresis-and-magnetization.pdf)
-<iframe src="/files/2025-2026-physics-lab-reports/05-ferromagnetic-hysteresis-and-magnetization.pdf" width="100%" height="900" style="border:1px solid #ddd;border-radius:10px;" loading="lazy"></iframe>
+<div class="pdf-preview" data-pdf-url="/files/2025-2026-physics-lab-reports/05-ferromagnetic-hysteresis-and-magnetization.pdf">
+  <button class="pdf-preview-button" type="button">展开预览</button>
+  <div class="pdf-preview-frame"></div>
+</div>
 
 <hr>
 
@@ -61,8 +71,10 @@ tags:
 
 郑昕颖，91/100.
 
-[打开 PDF](/files/2025-2026-physics-lab-reports/06-double-arm-bridge-low-resistance.pdf)
-<iframe src="/files/2025-2026-physics-lab-reports/06-double-arm-bridge-low-resistance.pdf" width="100%" height="900" style="border:1px solid #ddd;border-radius:10px;" loading="lazy"></iframe>
+<div class="pdf-preview" data-pdf-url="/files/2025-2026-physics-lab-reports/06-double-arm-bridge-low-resistance.pdf">
+  <button class="pdf-preview-button" type="button">展开预览</button>
+  <div class="pdf-preview-frame"></div>
+</div>
 
 <hr>
 
@@ -70,8 +82,10 @@ tags:
 
 谭艾林，94/100.
 
-[打开 PDF](/files/2025-2026-physics-lab-reports/07-unbalanced-bridge.pdf)
-<iframe src="/files/2025-2026-physics-lab-reports/07-unbalanced-bridge.pdf" width="100%" height="900" style="border:1px solid #ddd;border-radius:10px;" loading="lazy"></iframe>
+<div class="pdf-preview" data-pdf-url="/files/2025-2026-physics-lab-reports/07-unbalanced-bridge.pdf">
+  <button class="pdf-preview-button" type="button">展开预览</button>
+  <div class="pdf-preview-frame"></div>
+</div>
 
 <hr>
 
@@ -79,8 +93,10 @@ tags:
 
 郑昕颖，93/100.
 
-[打开 PDF](/files/2025-2026-physics-lab-reports/08-wheatstone-bridge.pdf)
-<iframe src="/files/2025-2026-physics-lab-reports/08-wheatstone-bridge.pdf" width="100%" height="900" style="border:1px solid #ddd;border-radius:10px;" loading="lazy"></iframe>
+<div class="pdf-preview" data-pdf-url="/files/2025-2026-physics-lab-reports/08-wheatstone-bridge.pdf">
+  <button class="pdf-preview-button" type="button">展开预览</button>
+  <div class="pdf-preview-frame"></div>
+</div>
 
 <hr>
 
@@ -88,8 +104,10 @@ tags:
 
 谭艾林，95/100.
 
-[打开 PDF](/files/2025-2026-physics-lab-reports/09-multimeter-design.pdf)
-<iframe src="/files/2025-2026-physics-lab-reports/09-multimeter-design.pdf" width="100%" height="900" style="border:1px solid #ddd;border-radius:10px;" loading="lazy"></iframe>
+<div class="pdf-preview" data-pdf-url="/files/2025-2026-physics-lab-reports/09-multimeter-design.pdf">
+  <button class="pdf-preview-button" type="button">展开预览</button>
+  <div class="pdf-preview-frame"></div>
+</div>
 
 <hr>
 
@@ -97,8 +115,10 @@ tags:
 
 费莹，96/100.
 
-[打开 PDF](/files/2025-2026-physics-lab-reports/10-millikan-oil-drop.pdf)
-<iframe src="/files/2025-2026-physics-lab-reports/10-millikan-oil-drop.pdf" width="100%" height="900" style="border:1px solid #ddd;border-radius:10px;" loading="lazy"></iframe>
+<div class="pdf-preview" data-pdf-url="/files/2025-2026-physics-lab-reports/10-millikan-oil-drop.pdf">
+  <button class="pdf-preview-button" type="button">展开预览</button>
+  <div class="pdf-preview-frame"></div>
+</div>
 
 <hr>
 
@@ -106,8 +126,10 @@ tags:
 
 王宙洋，85/90.
 
-[打开 PDF](/files/2025-2026-physics-lab-reports/11-spectrometer-adjustment-and-use.pdf)
-<iframe src="/files/2025-2026-physics-lab-reports/11-spectrometer-adjustment-and-use.pdf" width="100%" height="900" style="border:1px solid #ddd;border-radius:10px;" loading="lazy"></iframe>
+<div class="pdf-preview" data-pdf-url="/files/2025-2026-physics-lab-reports/11-spectrometer-adjustment-and-use.pdf">
+  <button class="pdf-preview-button" type="button">展开预览</button>
+  <div class="pdf-preview-frame"></div>
+</div>
 
 <hr>
 
@@ -115,8 +137,10 @@ tags:
 
 郭红丽，92/100.
 
-[打开 PDF](/files/2025-2026-physics-lab-reports/12-prism-deviation-angle-characteristics.pdf)
-<iframe src="/files/2025-2026-physics-lab-reports/12-prism-deviation-angle-characteristics.pdf" width="100%" height="900" style="border:1px solid #ddd;border-radius:10px;" loading="lazy"></iframe>
+<div class="pdf-preview" data-pdf-url="/files/2025-2026-physics-lab-reports/12-prism-deviation-angle-characteristics.pdf">
+  <button class="pdf-preview-button" type="button">展开预览</button>
+  <div class="pdf-preview-frame"></div>
+</div>
 
 <hr>
 
@@ -124,8 +148,10 @@ tags:
 
 张妍，90/100.
 
-[打开 PDF](/files/2025-2026-physics-lab-reports/13-franck-hertz-experiment.pdf)
-<iframe src="/files/2025-2026-physics-lab-reports/13-franck-hertz-experiment.pdf" width="100%" height="900" style="border:1px solid #ddd;border-radius:10px;" loading="lazy"></iframe>
+<div class="pdf-preview" data-pdf-url="/files/2025-2026-physics-lab-reports/13-franck-hertz-experiment.pdf">
+  <button class="pdf-preview-button" type="button">展开预览</button>
+  <div class="pdf-preview-frame"></div>
+</div>
 
 <hr>
 
@@ -133,5 +159,7 @@ tags:
 
 王鲲，84/90.
 
-[打开 PDF](/files/2025-2026-physics-lab-reports/14-oscilloscope-use.pdf)
-<iframe src="/files/2025-2026-physics-lab-reports/14-oscilloscope-use.pdf" width="100%" height="900" style="border:1px solid #ddd;border-radius:10px;" loading="lazy"></iframe>
+<div class="pdf-preview" data-pdf-url="/files/2025-2026-physics-lab-reports/14-oscilloscope-use.pdf">
+  <button class="pdf-preview-button" type="button">展开预览</button>
+  <div class="pdf-preview-frame"></div>
+</div>

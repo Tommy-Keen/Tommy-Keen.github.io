@@ -28,6 +28,36 @@ document.addEventListener('page:loaded', () => {
 });
 </script>
 
+<script>
+document.addEventListener('page:loaded', () => {
+  document.querySelectorAll('.pdf-preview').forEach(block => {
+    const button = block.querySelector('.pdf-preview-button');
+    const frameWrap = block.querySelector('.pdf-preview-frame');
+    const pdfUrl = block.dataset.pdfUrl;
+
+    if (!button || !frameWrap || !pdfUrl) return;
+    if (button.dataset.bound === 'true') return;
+    button.dataset.bound = 'true';
+
+    button.addEventListener('click', () => {
+      if (!frameWrap.querySelector('iframe')) {
+        const iframe = document.createElement('iframe');
+        iframe.src = pdfUrl;
+        iframe.loading = 'lazy';
+        iframe.title = 'PDF Preview';
+        frameWrap.appendChild(iframe);
+        frameWrap.classList.remove('is-collapsed');
+        button.textContent = '收起预览';
+        return;
+      }
+
+      const isCollapsed = frameWrap.classList.toggle('is-collapsed');
+      button.textContent = isCollapsed ? '展开预览' : '收起预览';
+    });
+  });
+});
+</script>
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
